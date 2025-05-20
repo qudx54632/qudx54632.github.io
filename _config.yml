@@ -15,20 +15,19 @@ name                     : &name "Dongxue Qu"
 description              : &description "personal description"
 url                      : https://qudx54632.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "https://github.com/qudx54632"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "qudx.jp2"
   name             : "Dongxue Qu (曲东雪)"
   pronouns         : "she/her"  
   bio              : "1992.02.02"
   location         : "Waterloo, ON, Canada"
   employer         : "Perimeter Institute for Theoretical Physics"
-  uri              : # URL
   email            : "dqu@perimeterinsitute.ca" 
 
   # Academic websites
