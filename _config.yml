@@ -23,24 +23,19 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  name             : "Dongxue Qu (曲东雪)"
+  pronouns         : "she/her"  
+  bio              : "1992.02.02"
+  location         : "Waterloo, ON, Canada"
+  employer         : "Perimeter Institute for Theoretical Physics"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "dqu@perimeterinsitute.ca" 
 
   # Academic websites
-  arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
-  semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : # URL
-  scopus           : # URL
-
+  inspirehep       : "https://inspirehep.net/authors/1949182"
+  googlescholar    : "https://scholar.google.com/citations?user=Ll8cUngAAAAJ&hl=en"
+  orcid            : "https://orcid.org/0000-0002-3900-8961"
+ 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
