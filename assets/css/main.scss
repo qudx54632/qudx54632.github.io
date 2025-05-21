@@ -1,27 +1,20 @@
 ---
 ---
 
-/* ---------------------------------------------
-  Core AcademicPages Theme (Minimal Mistakes)
---------------------------------------------- */
-@import "minimal-mistakes"; // required for theme base
+@import "minimal-mistakes"; // Required base theme
 
-/* ---------------------------------------------
-   Vanta.js constellation background support
---------------------------------------------- */
-
-/* Vanta background canvas */
-#vanta-bg {
+/* Particles.js canvas background */
+#particles-js {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: -9999;
-  background-color: #000; // fallback in case JS fails
+  background-color: #000; // fallback
 }
 
-/* Make all main layout areas transparent */
+/* Transparent layout containers */
 body,
 html,
 .wrapper,
@@ -41,19 +34,19 @@ article.page,
   box-shadow: none !important;
 }
 
-/* Optional: Make content blocks semi-transparent for readability */
+/* Optional: translucent background for content */
 .page__content {
-  background: rgba(0, 0, 0, 0.6); // translucent black
+  background: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 12px;
 }
 
-/* Typography and color adjustments for dark background */
+/* Text contrast */
 body {
   color: #f0f0f0;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
   color: #ffffff;
 }
 
@@ -67,7 +60,6 @@ a {
   color: #ffffff;
 }
 
-/* Optional: remove author image background */
 .author__avatar img {
   background: transparent !important;
   border: none !important;
