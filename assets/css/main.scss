@@ -1,53 +1,58 @@
----
----
+// ---------------------------------------------
+// AcademicPages base theme import (default)
+// ---------------------------------------------
+@import "minimal-mistakes"; // DO NOT remove this line if you're using AcademicPages
 
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
+// ---------------------------------------------
+// Custom styling starts here
+// ---------------------------------------------
 
-@import
-    "vendor/breakpoint/breakpoint",
-
-    "themes",
-    "theme/default",
-    "theme/dark",
-
-    "include/mixins",
-    "vendor/susy/susy",
-
-    "layout/reset",
-    "layout/base",
-
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
-
-    "layout/forms",
-
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands",
-    "vendor/magnific-popup/magnific-popup"
-;
-
-#particles-js {
+// Vanta.js constellation background
+#vanta-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -10;
-  background-color: #000000; /* optional */
+  z-index: -9999;
+  background-color: #000; // fallback
+}
+
+// Make the sidebar, header, and footer transparent
+.sidebar,
+.page__footer,
+.masthead {
+  background-color: transparent !important;
+}
+
+// Optional: Improve text contrast on dark background
+body {
+  color: #f0f0f0;
+}
+
+a {
+  color: #00bfff;
+}
+
+// Optional: Tweak sidebar text contrast
+.sidebar a,
+.sidebar .author__name,
+.sidebar .author__bio {
+  color: #ffffff;
+}
+
+// Optional: Make cards and boxes slightly transparent
+.page,
+.archive,
+article.page,
+.post,
+.page__content {
+  background: rgba(0, 0, 0, 0.6); // semi-transparent black
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+// Optional: Smooth fade-in effect for background content
+body {
+  transition: background 0.5s ease;
 }
