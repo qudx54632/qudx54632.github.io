@@ -1,60 +1,43 @@
 ---
 ---
 
-@import "minimal-mistakes"; // Required base theme import for AcademicPages
+/*
+ * This file controls what is imported from /_sass
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ */
 
-/* ---------------------------------------------
-   particles.js full-screen background setup
---------------------------------------------- */
+@import
+    "vendor/breakpoint/breakpoint",
 
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;              // Place behind everything
-  pointer-events: none;     // Allow clicks to pass through
-  background-color: #000;   // Optional: fallback if JS fails
-}
+    "themes",
+    "theme/default",
+    "theme/dark",
 
-/* ---------------------------------------------
-   Optional: enhance readability on dark bg
---------------------------------------------- */
+    "include/mixins",
+    "vendor/susy/susy",
 
-body {
-  color: #f0f0f0;
-  background: transparent;
-}
+    "layout/reset",
+    "layout/base",
 
-a {
-  color: #00bfff;
-}
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
 
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff;
-}
+    "layout/forms",
 
-/* ---------------------------------------------
-   Optional: semi-transparent box for page content
-   You can disable this if you want full transparency
---------------------------------------------- */
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar",
 
-.page__content {
-  background: rgba(0, 0, 0, 0.6); // translucent black
-  padding: 2rem;
-  border-radius: 12px;
-}
-
-/* Sidebar text and links */
-.sidebar .author__name,
-.sidebar .author__bio,
-.sidebar a {
-  color: #ffffff;
-}
-
-/* Optional: make images or blocks softer over stars */
-.author__avatar img {
-  background: transparent !important;
-  border: none !important;
-}
+    "vendor/font-awesome/fontawesome",
+    "vendor/font-awesome/solid",
+    "vendor/font-awesome/brands",
+    "vendor/magnific-popup/magnific-popup"
+;
