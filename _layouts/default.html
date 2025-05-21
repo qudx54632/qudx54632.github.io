@@ -13,7 +13,7 @@ layout: compress
 
   <body>
 
-    <!-- particles.js container -->
+    <!-- particles.js background container -->
     <div id="particles-js"></div>
 
     {% include browser-upgrade.html %}
@@ -30,32 +30,18 @@ layout: compress
 
     {% include scripts.html %}
 
-    <!-- particles.js script -->
+    <!-- particles.js library -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+    <!-- particles.js config -->
     <script>
       particlesJS("particles-js", {
         "particles": {
-          "number": {
-            "value": 100,
-            "density": {
-              "enable": true,
-              "value_area": 800
-            }
-          },
-          "color": {
-            "value": "#ffffff"
-          },
-          "shape": {
-            "type": "circle"
-          },
-          "opacity": {
-            "value": 0.5,
-            "random": true
-          },
-          "size": {
-            "value": 2,
-            "random": true
-          },
+          "number": { "value": 80, "density": { "enable": true, "value_area": 800 }},
+          "color": { "value": "#ffffff" },
+          "shape": { "type": "circle" },
+          "opacity": { "value": 0.5, "random": true },
+          "size": { "value": 2, "random": true },
           "line_linked": {
             "enable": true,
             "distance": 150,
@@ -63,33 +49,16 @@ layout: compress
             "opacity": 0.4,
             "width": 1
           },
-          "move": {
-            "enable": true,
-            "speed": 1
-          }
+          "move": { "enable": true, "speed": 1 }
         },
         "interactivity": {
-          "detect_on": "canvas",
           "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "grab"
-            },
-            "onclick": {
-              "enable": true,
-              "mode": "push"
-            }
+            "onhover": { "enable": true, "mode": "grab" },
+            "onclick": { "enable": true, "mode": "push" }
           },
           "modes": {
-            "grab": {
-              "distance": 200,
-              "line_linked": {
-                "opacity": 0.5
-              }
-            },
-            "push": {
-              "particles_nb": 4
-            }
+            "grab": { "distance": 200, "line_linked": { "opacity": 0.5 }},
+            "push": { "particles_nb": 4 }
           }
         },
         "retina_detect": true
