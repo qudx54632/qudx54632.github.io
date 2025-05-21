@@ -1,13 +1,16 @@
-// ---------------------------------------------
-// AcademicPages base theme import (default)
-// ---------------------------------------------
-@import "minimal-mistakes"; // DO NOT remove this line if you're using AcademicPages
+---
+---
 
-// ---------------------------------------------
-// Custom styling starts here
-// ---------------------------------------------
+/* ---------------------------------------------
+  Core AcademicPages Theme (Minimal Mistakes)
+--------------------------------------------- */
+@import "minimal-mistakes"; // required for theme base
 
-// Vanta.js constellation background
+/* ---------------------------------------------
+   Vanta.js constellation background support
+--------------------------------------------- */
+
+/* Vanta background canvas */
 #vanta-bg {
   position: fixed;
   top: 0;
@@ -15,44 +18,57 @@
   width: 100vw;
   height: 100vh;
   z-index: -9999;
-  background-color: #000; // fallback
+  background-color: #000; // fallback in case JS fails
 }
 
-// Make the sidebar, header, and footer transparent
+/* Make all main layout areas transparent */
+body,
+html,
+.wrapper,
+.page,
+.page__content,
+.archive,
+article.page,
+.post,
+.page__inner-wrap,
 .sidebar,
+.masthead,
 .page__footer,
-.masthead {
+.author__avatar,
+.author__content {
+  background: transparent !important;
   background-color: transparent !important;
+  box-shadow: none !important;
 }
 
-// Optional: Improve text contrast on dark background
+/* Optional: Make content blocks semi-transparent for readability */
+.page__content {
+  background: rgba(0, 0, 0, 0.6); // translucent black
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+/* Typography and color adjustments for dark background */
 body {
   color: #f0f0f0;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #ffffff;
 }
 
 a {
   color: #00bfff;
 }
 
-// Optional: Tweak sidebar text contrast
 .sidebar a,
 .sidebar .author__name,
 .sidebar .author__bio {
   color: #ffffff;
 }
 
-// Optional: Make cards and boxes slightly transparent
-.page,
-.archive,
-article.page,
-.post,
-.page__content {
-  background: rgba(0, 0, 0, 0.6); // semi-transparent black
-  padding: 1.5rem;
-  border-radius: 12px;
-}
-
-// Optional: Smooth fade-in effect for background content
-body {
-  transition: background 0.5s ease;
+/* Optional: remove author image background */
+.author__avatar img {
+  background: transparent !important;
+  border: none !important;
 }
