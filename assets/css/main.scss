@@ -42,3 +42,23 @@
     "vendor/magnific-popup/magnific-popup"
 ;
 
+#gravity-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Optional: make layout transparent in dark mode only */
+[data-theme="dark"] body,
+[data-theme="dark"] .page,
+[data-theme="dark"] .wrapper,
+[data-theme="dark"] .page__content,
+[data-theme="dark"] .masthead,
+[data-theme="dark"] .page__footer {
+  background: transparent !important;
+}
