@@ -42,24 +42,29 @@
     "vendor/magnific-popup/magnific-popup"
 ;
 
+/* -------------------------------------------------------
+   Override for particles.js background & content panels
+   ------------------------------------------------------- */
+
+/* Full-page particles canvas */
 #particles-js {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;              // behind all content
-  pointer-events: none;     // allow clicks through
+  z-index: -1;
+  pointer-events: none;
   background-color: transparent;
 }
 
-/* Make layout areas transparent to reveal background */
+/* Make all layout containers transparent so particles show through */
 body,
 html,
 .wrapper,
 .page,
-.page__content,
 .page__inner-wrap,
+.page__content,
 .sidebar,
 .masthead,
 .page__footer,
@@ -71,17 +76,53 @@ html,
   border: none !important;
 }
 
-/* Optional: slight dark overlay behind content for readability */
-[data-theme="dark"] .page__content {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 12px;
+/* — Light Mode Panel — */
+:root:not([data-theme="dark"]) {
+  /* Semi-opaque white "glass" behind text */
+  .page__content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 12px;
+    color: #333333;
+  }
+
+  /* Dark text for readability */
+  body {
+    color: #333333;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #111111;
+  }
+  a {
+    color: #0066cc;
+  }
+  .sidebar .author__name,
+  .sidebar .author__bio,
+  .sidebar a {
+    color: #333333;
+  }
 }
 
-[data-theme="dark"] body {
-  color: #f0f0f0;
-}
-
-[data-theme="dark"] h1, h2, h3, h4, h5 {
-  color: #ffffff;
+/* — Dark Mode Panel — */
+[data-theme="dark"] {
+  .page__content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 12px;
+    color: #f0f0f0;
+  }
+  body {
+    color: #f0f0f0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+  }
+  a {
+    color: #00bfff;
+  }
+  .sidebar .author__name,
+  .sidebar .author__bio,
+  .sidebar a {
+    color: #ffffff;
+  }
 }
