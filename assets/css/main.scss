@@ -52,3 +52,36 @@
   pointer-events: none;     // allow clicks through
   background-color: transparent;
 }
+
+/* Make layout areas transparent to reveal background */
+body,
+html,
+.wrapper,
+.page,
+.page__content,
+.page__inner-wrap,
+.sidebar,
+.masthead,
+.page__footer,
+.site-header,
+.site-footer {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Optional: slight dark overlay behind content for readability */
+[data-theme="dark"] .page__content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+[data-theme="dark"] body {
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] h1, h2, h3, h4, h5 {
+  color: #ffffff;
+}
