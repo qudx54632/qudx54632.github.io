@@ -5,15 +5,14 @@ layout: compress
 {% include base_path %}
 
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js" data-theme="dark">
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
 
   <body>
-
-    <!-- particles.js full background -->
+<!-- particles.js full background -->
     <div id="particles-js"></div>
 
     {% include browser-upgrade.html %}

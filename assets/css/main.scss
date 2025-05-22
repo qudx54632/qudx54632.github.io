@@ -1,69 +1,43 @@
 ---
 ---
 
-@import "minimal-mistakes"; // Required for AcademicPages base styling
+/*
+ * This file controls what is imported from /_sass
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ */
 
-/* Full-screen particles.js background */
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  pointer-events: none;
-  background-color: #000; // fallback if JS fails
-}
+@import
+    "vendor/breakpoint/breakpoint",
 
-/* Make all layout sections transparent */
-body,
-html,
-.wrapper,
-.page,
-.page__content,
-.archive,
-article.page,
-.post,
-.page__inner-wrap,
-.sidebar,
-.masthead,
-.page__footer,
-.site-header,
-.site-footer {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
+    "themes",
+    "theme/default",
+    "theme/dark",
 
-/* Optional: dark-glass background for main content */
-.page__content {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 12px;
-}
+    "include/mixins",
+    "vendor/susy/susy",
 
-/* Dark mode friendly text colors */
-body {
-  color: #f0f0f0;
-}
+    "layout/reset",
+    "layout/base",
 
-h1, h2, h3, h4, h5 {
-  color: #ffffff;
-}
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
 
-a {
-  color: #00bfff;
-}
+    "layout/forms",
 
-/* Sidebar adjustments */
-.sidebar .author__name,
-.sidebar .author__bio,
-.sidebar a {
-  color: #ffffff;
-}
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar",
 
-.author__avatar img {
-  background: transparent !important;
-  border: none !important;
-}
+    "vendor/font-awesome/fontawesome",
+    "vendor/font-awesome/solid",
+    "vendor/font-awesome/brands",
+    "vendor/magnific-popup/magnific-popup"
+;
