@@ -53,47 +53,42 @@
   background-color: transparent;
 }
 
-/* Transparent layout so animation shows through */
-body,
-html,
-.wrapper,
-.page,
-.page__content,
-.sidebar,
-.masthead,
-.page__footer {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
+/* Applies only in dark mode */
+[data-theme="dark"] {
+  body,
+  html,
+  .wrapper,
+  .page,
+  .page__content,
+  .sidebar,
+  .masthead,
+  .page__footer {
+    background: transparent !important;
+    color: #f0f0f0;
+  }
 
-/* Optional: dark glass behind content for readability */
-.page__content {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 12px;
-}
+  .page__content {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 2rem;
+  }
 
-/* Text color adjustments for dark background */
-body {
-  color: #f0f0f0;
-}
+  h1, h2, h3, h4, h5 {
+    color: #ffffff;
+  }
 
-h1, h2, h3, h4, h5 {
-  color: #ffffff;
-}
+  a {
+    color: #00bfff;
+  }
 
-a {
-  color: #00bfff;
-}
+  .sidebar a,
+  .sidebar .author__name,
+  .sidebar .author__bio {
+    color: #ffffff;
+  }
 
-.sidebar a,
-.sidebar .author__name,
-.sidebar .author__bio {
-  color: #ffffff;
-}
-
-.author__avatar img {
-  background: transparent !important;
-  border: none !important;
+  .author__avatar img {
+    background: transparent !important;
+    border: none !important;
+  }
 }
