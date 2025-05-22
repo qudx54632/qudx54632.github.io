@@ -5,13 +5,16 @@ layout: compress
 {% include base_path %}
 
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js" data-theme="dark">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
 
   <body>
+
+    <!-- particles.js full background -->
+    <div id="particles-js"></div>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
@@ -26,6 +29,39 @@ layout: compress
     </div>
 
     {% include scripts.html %}
+
+    <!-- Load particles.js and config -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        "particles": {
+          "number": { "value": 80, "density": { "enable": true, "value_area": 800 }},
+          "color": { "value": "#ffffff" },
+          "shape": { "type": "circle" },
+          "opacity": { "value": 0.5, "random": true },
+          "size": { "value": 2, "random": true },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": { "enable": true, "speed": 1 }
+        },
+        "interactivity": {
+          "events": {
+            "onhover": { "enable": true, "mode": "grab" },
+            "onclick": { "enable": true, "mode": "push" }
+          },
+          "modes": {
+            "grab": { "distance": 200, "line_linked": { "opacity": 0.5 }},
+            "push": { "particles_nb": 4 }
+          }
+        },
+        "retina_detect": true
+      });
+    </script>
 
   </body>
 </html>
