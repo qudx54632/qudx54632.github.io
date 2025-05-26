@@ -1,43 +1,83 @@
 ---
 ---
 
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
-
 @import
-    "vendor/breakpoint/breakpoint",
-
-    "themes",
-    "theme/default",
-    "theme/dark",
-
-    "include/mixins",
-    "vendor/susy/susy",
-
-    "layout/reset",
-    "layout/base",
-
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
-
-    "layout/forms",
-
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands",
-    "vendor/magnific-popup/magnific-popup"
+  "vendor/breakpoint/breakpoint",
+  "themes",
+  "theme/default",
+  "theme/dark",
+  "include/mixins",
+  "vendor/susy/susy",
+  "layout/reset",
+  "layout/base",
+  "include/utilities",
+  "layout/tables",
+  "layout/buttons",
+  "layout/notices",
+  "layout/masthead",
+  "layout/navigation",
+  "layout/footer",
+  "syntax",
+  "layout/forms",
+  "layout/page",
+  "layout/archive",
+  "layout/sidebar",
+  "vendor/font-awesome/fontawesome",
+  "vendor/font-awesome/solid",
+  "vendor/font-awesome/brands",
+  "vendor/magnific-popup/magnific-popup"
 ;
+
+/* tsParticles 背景画布 */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+/* 深色模式下透明背景 + 文字增强 */
+[data-theme="dark"] body,
+[data-theme="dark"] html,
+[data-theme="dark"] .wrapper,
+[data-theme="dark"] .page,
+[data-theme="dark"] .page__content,
+[data-theme="dark"] .page__inner-wrap,
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .masthead,
+[data-theme="dark"] .page__footer,
+[data-theme="dark"] .site-header,
+[data-theme="dark"] .site-footer {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+[data-theme="dark"] .page__content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+[data-theme="dark"] body {
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] h1, h2, h3, h4 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] a {
+  color: #00bfff;
+}
+
+[data-theme="dark"] .sidebar a,
+[data-theme="dark"] .sidebar .author__name,
+[data-theme="dark"] .sidebar .author__bio {
+  color: #ffffff;
+}
