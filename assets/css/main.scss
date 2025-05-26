@@ -1,11 +1,5 @@
----
----
-
 /*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ * 修改后的主Sass文件结构
  */
 
 @import
@@ -20,6 +14,9 @@
 
     "layout/reset",
     "layout/base",
+
+    // 新增粒子组件导入
+    "components/particles",
 
     "include/utilities",
     "layout/tables",
@@ -41,4 +38,3 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
-

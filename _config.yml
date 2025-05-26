@@ -344,3 +344,9 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# 在配置文件中添加
+particles:
+  content_max_width: 1200px    # 最大内容宽度
+  content_padding: 2rem        # 内容内边距 
+  blur_intensity: 8            # 毛玻璃模糊度（0-10）

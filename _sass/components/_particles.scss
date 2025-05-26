@@ -1,0 +1,45 @@
+/* 在 _sass 目录下新建 components/_particles.scss */
+// =============================================================================
+// 粒子背景组件
+// =============================================================================
+
+// 粒子容器
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: var(--page-background);
+  transition: background 0.3s ease;
+}
+
+// 内容层增强
+.page__content {
+  position: relative;
+  z-index: 1;
+  background: var(--content-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  margin: 1rem auto;
+  padding: 2rem;
+  max-width: 90%;
+
+  @include breakpoint(medium) {
+    max-width: 80%;
+    margin: 2rem auto;
+  }
+
+  @include breakpoint(large) {
+    max-width: 70%;
+  }
+}
+
+// 暗色模式适配
+[data-theme="dark"] {
+  .page__content {
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
+  }
+}
