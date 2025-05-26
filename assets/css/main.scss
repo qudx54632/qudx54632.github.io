@@ -41,35 +41,3 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
-
-body {
-  background: transparent !important;
-  overflow-x: hidden; // 防止横向滚动条
-}
-
-// 层级控制 (限定直接子元素)
-body > .navbar,
-body > .main-content,
-body > .footer {
-  position: relative;
-  z-index: 9999; // 提升至更高层级
-  transform: translateZ(0); // 触发硬件加速
-}
-
-// 卡片效果增强
-.card {
-  background-color: rgba(255, 255, 255, 0.92) !important;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.12) !important;
-  backdrop-filter: blur(2px); // 添加毛玻璃效果
-  
-  @media (max-width: 768px) {
-    background-color: rgba(255, 255, 255, 0.96) !important;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08) !important;
-    backdrop-filter: none;
-  }
-}
-
-// 防止代码块透明
-.highlight {
-  background-color: rgba(255,255,255,0.95) !important;
-}
