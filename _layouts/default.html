@@ -1,7 +1,6 @@
 ---
 layout: compress
 ---
-
 {% include base_path %}
 
 <!doctype html>
@@ -9,23 +8,39 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <!-- 预加载粒子样式 -->
+    <style>
+      #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none; /* 防止阻挡交互 */
+      }
+    </style>
   </head>
 
   <body>
+    <!-- 正确位置：body内部起始位置 -->
+    <div id="particles-js"></div>
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    <!-- 添加内容包裹层 -->
+    <div class="content-wrapper">
+      {% include browser-upgrade.html %}
+      {% include masthead.html %}
 
-    {{ content }}
+      {{ content }}
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
+      <div class="page__footer">
+        <footer>
+          {% include footer/custom.html %}
+          {% include footer.html %}
+        </footer>
+      </div>
     </div>
 
     {% include scripts.html %}
-
   </body>
 </html>
